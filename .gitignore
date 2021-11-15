@@ -1,0 +1,6 @@
+/target/
+/mapdb/
+/.settings/
+/.classpath
+/.project
+/CGH_BLAST-0.0.1-SNAPSHOT.war

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright (C) 2016 <CIRAD>
+   
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License, version 3 as
+    published by the Free Software Foundation.
+   
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+    See the GNU Affero General Public License for more details.
+   
+    See <http://www.gnu.org/licenses/gpl-3.0.html> for details about
+    GNU Affero General Public License V3.
+   
+    Contributors:
+        Anestis Gkanogiannis <ganoyan@gmail.com>
+ -->
+
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="ehcache.xsd" updateCheck="false"
+	monitoring="autodetect" dynamicConfig="true">
+
+	<diskStore path="/Users/gkanogiannis/Documents/git/CassavaHubJavaTools/Blast/cassava_cache" /> 
+    
+	<cache name="feature_cache" 
+		maxElementsInMemory="5000"
+    	eternal="true"
+   	 	timeToIdleSeconds="120"
+    	timeToLiveSeconds="120"
+    	overflowToDisk="true"
+   		maxElementsOnDisk="50000000"
+    	diskPersistent="true"
+    	diskExpiryThreadIntervalSeconds="120"
+    	memoryStoreEvictionPolicy="LRU">
+	</cache>
+	
+	<cache name="protein_cache" 
+		maxElementsInMemory="5000"
+    	eternal="true"
+   	 	timeToIdleSeconds="120"
+    	timeToLiveSeconds="120"
+    	overflowToDisk="true"
+   		maxElementsOnDisk="50000000"
+    	diskPersistent="true"
+    	diskExpiryThreadIntervalSeconds="120"
+    	memoryStoreEvictionPolicy="LRU">
+	</cache>
+	
+	<cache name="transcript_cache" 
+		maxElementsInMemory="5000"
+    	eternal="true"
+   	 	timeToIdleSeconds="120"
+    	timeToLiveSeconds="120"
+    	overflowToDisk="true"
+   		maxElementsOnDisk="50000000"
+    	diskPersistent="true"
+    	diskExpiryThreadIntervalSeconds="120"
+    	memoryStoreEvictionPolicy="LRU">
+	</cache>
+	
+
+</ehcache>
